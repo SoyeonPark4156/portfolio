@@ -1,0 +1,289 @@
+.about_banner_sec{
+    width: 100%;
+    height: 400px;
+    background-color: #eae7b1;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.about_banner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color:#253d35;
+    padding: 15px 0;
+    box-sizing: border-box;
+ }
+ .ad_ment{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 50px;
+    font-family: 'NanumSquareNeo-Variable';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+ }
+ .earth_icon{
+    position: absolute;
+    top: -5%;
+    right: 5%;
+    width: 20vw;
+    height: 100%;
+    max-width: 270px;
+    background: url(../img/환경icon_color.png)no-repeat center / contain;
+ }
+.scroll_array{
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    font-size: 19px;
+    font-weight: 600;
+}
+.down_arrow{
+    display: inline;
+    position: absolute;
+    animation: scroll_arrow 0.8s infinite;
+}
+@keyframes scroll_arrow{
+    0%{top:-5px;}
+    50%{top: 10px;}
+    100%{top: -5px;}
+}
+.bg_img_sec{
+    width: 100%;
+    height: 350px;
+}
+.bg_img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/ad_pic_2.jpg)no-repeat center / cover;
+    transform: translateZ(0); /* fixed된 요소의 잔상 이슈 해결 */
+    z-index: -9;
+}
+.shop_info_sec{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 100px 0;
+}
+.shop_info_box{
+    position: relative; 
+    width: 100%; 
+    height: 600px; 
+}
+.info_img_box{
+    max-width: 450px;
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: -50%;
+    opacity: 0;
+}
+.info_img_box img{
+    width: 100%;
+    height: 100%;
+}
+.info_ment_box{
+    position: absolute;
+    top: 0;
+    right: -50%;
+    opacity: 0;
+    width: 50%;
+    text-align: center;
+}
+.info_title{
+    font-size: 30px;
+    font-weight: 900;
+    color: #97B38B;
+    padding: 20px 0;
+}
+.info_ment{
+    line-height: 35px;
+    color: #737373;
+}
+.bg_blur{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.mission{
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mission_ment{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.shop_slogan_sec{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+.shop_slogan_wrap{
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    padding: 100px 0;
+}
+.slogan_box{
+    width: calc((100% - (50px * 2))/3);
+    position: relative;
+    top: 50%;
+    opacity: 0;
+}
+.slogan_img_box{
+    width: 100%;
+    height: 60%;
+}
+.slogan_img_box img{
+    width: 100%;
+    height: 100%;
+}
+.slogan_txt_box{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.slogan_title{
+    font-size: 25px;
+    font-weight: 700;
+    color: #97B38B;
+    padding: 20px 0;
+}
+.slogan_ment{
+    font-size: 18px;
+    font-weight: 300;
+}
+.location_wrap{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+}
+.location_sec{
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.location_sec iframe{
+    width: 100%;
+    height: 500px;
+    border-style: none;
+    padding-bottom: 100px;
+}
+.line{
+    width: 5%;
+    height: 1px;
+    background-color: #97B38B;
+    margin: 50px 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.location_title{
+    font-size: 30px;
+    font-weight: 900;
+    color: #97B38B;
+    text-decoration: underline;
+    padding: 30px 0;
+}
+.location{
+    color: #737373;
+    padding-bottom: 50px;
+}
+/* 반응형 */
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/ 
+@media screen and (max-width:1023px) { 
+    .ad_ment{
+        font-size: 20px;
+     }
+     .shop_info_box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        height: auto; 
+    }
+    .info_img_box{
+        position: static;
+    }
+    .info_ment_box{
+        position: static;
+    }
+} 
+
+/* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/ 
+@media screen and (max-width:767px) {
+    .about_banner_sec{
+        height: 350px;
+    }
+    .ad_ment{
+        font-size: 15px;
+    }
+    .info_ment_box{
+        width: 80%;
+    }
+    .shop_slogan_wrap {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .slogan_box {
+        width: 50%;
+        position: relative;
+        top: 50%;
+        opacity: 0;
+    }
+    .info_title {
+        font-size: 17px;
+    }
+    .info_ment {
+        line-height: 29px;
+    }
+     
+
+} 
+
+/* 모바일 세로 (해상도 ~ 479px)*/ 
+@media screen and (max-width:479px) {
+    .about_banner_sec{
+        height: 300px;
+    }
+    .earth_icon{
+        display: none;
+    }
+    .location_title {
+        font-size: 18px;
+    }
+    .location {
+        font-size: 14px;
+    }
+    .location_sec iframe {
+        height: 350px;
+    }
+    .info_ment{
+        font-size: 13px;
+    }
+    .mission_ment {
+        font-size: 17px;
+        line-height: 27px;
+    }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제로띵스</title>
+    <link rel="icon" href="./img/favicon.jpg">
+    <link rel="stylesheet" href="./css/commom.css">
+    <link rel="stylesheet" href="./css/h_f.css">
+    <link rel="stylesheet" href="./css/deal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="./js/ITEM_LIST.js"></script>
+    <script src="./js/h_f.js"></script>
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/deal.js"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+                <!-- 사이드메뉴 박스 바탕 -->
+                <div class="side_menu_wrap">
+                    <div class="side_menu_bg"></div>
+                </div>
+                    <!-- 사이드메뉴 박스 -->
+                <div class="side_menu_box">
+                    <div class="side_menu">
+                        <div class="side_menu_top">
+                            <a href=""><img src="./img/메인로고.png" alt="logo"></a>
+                            <div class="h_icon join_icon"><a href=""></a></div>
+                        </div>
+                        <ul class="side_menu_ul">
+                            <li class="side_menu_li"><a href="about.html">ABOUT</a></li>
+                            <li class="side_menu_li">
+                                <div class="shop_menu">SHOP<div class="show_li_btn"></div></div> 
+                                <ul class="sub_ul">
+                                    <li class="sub_li"><a href="product.html">전체보기</a></li>
+                                    <li class="sub_li"><a href="product.html?cate=0">선물 세트</a></li>
+                                    <li class="sub_li"><a href="product.html?cate=1">리빙 제품</a></li>
+                                    <li class="sub_li"><a href="product.html?cate=2">욕실 제품</a></li>
+                                    <li class="sub_li"><a href="product.html?cate=3">주방 제품</a></li>
+                                    <li class="sub_li"><a href="product.html?cate=4">비건</a></li>
+                                </ul>
+                            </li>
+                            <li class="side_menu_li"><a href="">느린도서관</a></li>
+                            <li class="side_menu_li"><a href="">Q&A</a></li>
+                            <li class="side_menu_li"><a href="">게시판</a></li>
+                            <li class="side_menu_li"><a href="">B2B</a></li>
+                        </ul>
+                    </div>
+                    <div class="side_ham_box">
+                        <div class="side_ham_line"></div>
+                        <div class="side_ham_line"></div>
+                        <div class="side_ham_line"></div>
+                    </div>
+                </div>
+        <!-- 헤더 -->
+        <header class="header">
+            <div class="header_left"></div>
+            <div class="header_center">
+                <div class="header_logo"><a href="index.html"><img src="./img/메인로고.png" alt="logo"></a></div>
+                <div class="header_menu">
+                    <ul class="menu_ul">
+                        <li class="menu_li"><a href="about.html">ABOUT</a></li>
+                        <li class="menu_li" id="shop_menu">
+                            <a href="product.html">SHOP</a>
+                            <ul class="drop_menu_ul">
+                                <li class="drop_menu_li"><a href="product.html">전체</a></li>
+                                <li class="drop_menu_li"><a href="product.html?cate=0">선물 세트</a></li>
+                                <li class="drop_menu_li"><a href="product.html?cate=1">리빙 제품</a></li>
+                                <li class="drop_menu_li"><a href="product.html?cate=2">주방 제품</a></li>
+                                <li class="drop_menu_li"><a href="product.html?cate=3">욕실 제품</a></li>
+                                <li class="drop_menu_li"><a href="product.html?cate=4">비건</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu_li"><a href="">느린도서관</a></li>
+                        <li class="menu_li"><a href="">Q&A</a></li>
+                        <li class="menu_li"><a href="">게시판</a></li>
+                        <li class="menu_li"><a href="">B2B</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header_right">
+                <div class="icon_list">
+                    <div class="h_icon search_icon"><a href=""></a></div>
+                    <div class="h_icon join_icon"><a href=""></a></div>
+                    <div class="h_icon shop_bag_icon"><a href=""></a></div>
+                    <div class="join_speech_bubble">JOIN NOW +1,000</div>
+                </div>
+            </div>
+        </header>
+        <!-- main -->
+        <main class="main">
+             <!-- 상단이동 아이콘 삽입 -->
+             <img src="./img/위쪽 화살표.png" alt="" class="btn_gotop">
+             <img src="./img/아래쪽 화살표.png" alt="" class="btn_gobottom">
+
+            <div class="contents_area">
+                <div class="item_detail_sec">
+                    <div class="item_img_sec">
+                        <div class="big_img"></div>
+                        <img src="" alt="">
+                    </div>
+                    <div class="item_info_sec">
+                        <div class="item_name padding"></div>
+                        <div class="item_price_info padding"><span class="item_o_price"></span><span class="item_s_price"></span></div>
+                        <div class="delivery_info padding">
+                            <span class="detail_title">배송비</span>
+                            <span> 2,700원 (35,000원 이상 구매 시 무료)
+                                <br>제주 및 도서 산간 3,000원 추가</span>
+                        </div>
+                        
+                        <div class="item_select_sec padding">
+                            <!-- <div class="item_option_sec">
+                                <div class="detail_title">선택사항</div>
+                                <select name="item_option" id="" class = "select_opt">
+                                    <option value=""> 선택하세요.</option>
+                                    <option value="Green(샴푸바)">Green(샴푸바)</option>
+                                    <option value="Red(바디워시바)">Red(바디워시바)</option>
+                                </select>
+                            </div> -->
+                            <div class="item_qty_sec padding" id="qty_select_box">
+                                <div class="detail_title">수량</div>
+                                <div class="opt_qty_box">
+                                    <input type="button" class="btn_qty txt_minus" value="-">
+                                    <input type="text" class="txt_qty" id="qty_num" value="1" readonly>
+                                    <input type="button" class="btn_qty txt_plus" value="+">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="option_selected_sec padding">
+                            <!-- <div class="option_selected_box">
+                                <div class="qty_select_wrap">
+                                    <span class="opt_name">[Gift Set] 크리스마스 제로웨이스트 키트</span>
+                                    <span class="opt_del_btn">x</span>
+                                </div>
+                                <div class="qty_select_wrap">
+                                    <div class="opt_qty_box">
+                                        <input type="button" class="btn_qty txt_minus" value="-">
+                                        <input type="text" class="txt_qty" value="1" readonly>
+                                        <input type="button" class="btn_qty txt_plus" value="+">
+                                    </div>
+                                    <div class="opt_price">10000원</div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="select_qty_sec padding">
+                            <div class="detail_title">주문 수량</div>
+                            <div class="total_qty"></div>
+                        </div>
+                        <div class="select_qty_sec">
+                            <div class="detail_title">총 상품 금액</div>
+                            <div class="total_price"></div>
+                        </div>
+                        <div class="buybutton_wrap padding">
+                            <button class="btn_box buy_btn">구매하기</button>
+                            <button class="btn_box shopbag_btn">장바구니 담기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="datail_info_sec">
+                    <div class="navi_tabs_wrap">
+                        <div class="navi_tabs ">
+                            <a href="#info" class="tabs_event"><div class="tabs info_tab" data-tab="info">상품 설명</div></a>
+                            <a href="#review"><div class="tabs review_tab" data-tab="reivew">후기</div></a>
+                        </div>
+                    </div>
+                    <div class="info_wrap" id="info">
+                        <div class="long_img_box">
+                            <img src="./img/desc.jpg" alt="">
+                            <img src="" alt="" class="item_desc_img">
+                            <img src="./img/desc2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="navi_tabs_wrap">
+                        <div class="navi_tabs">
+                            <a href="#info"><div class="tabs info_tab" data-tab="info">상품 설명</div></a>
+                            <a href="#review" class="tabs_event"><div class="tabs review_tab" data-tab="reivew">후기</div></a>
+                        </div>
+                    </div>
+                    <div class="review_wrap" id="review">
+                        <div class="rv_title">후기</div>
+                        <div class="rv_txt_area">
+                            <div class="rv_txt">등록된 후기가 없습니다.</div>
+                        </div>
+                        <button class="rv_btn">후기 쓰기</button>
+                    </div>
+                </div>
+            </div>
+           
+        </main>
+        <!-- 푸터 -->
+        <footer class="footer">
+            <div class="footer_logo">
+                <a href="#"><img src="./img/메인로고.png" alt=""></a>
+            </div>
+            <div class="footer_infos">
+                <p>상호: 제로띵스 | 대표: 이윤주 | 개인정보관리책임자: 이윤주 | 전화: 02-2263-6148 | 이메일: zerothings_shop@naver.com</p>
+                <p>주소: 서울 중구 수표로 32-1, 3층 제로띵스 | 사업자등록번호: 126-55-00563 | 통신판매: 제 2021-서울중구-1313 호 | 호스팅제공자: (주)식스샵</p>
+            </div>
+            <div class="footer_icons">
+                <a href="https://www.instagram.com/zerothings_shop/"><div class="f_icon insta_icon"></div></a>
+                <a href="https://blog.naver.com/zerothings_shop"><div class="f_icon blog_icon"></div></a>
+            </div>
+            
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.nanumgothic * {
+ font-family: 'Nanum Gothic', sans-serif;
+}
+body{margin: 0%;font-family: 'NanumSquareNeo-Variable';}
+ul{list-style: none; margin: 0;padding: 0%;}
+a{text-decoration: none; color: inherit;}
+h1,h2,h3,h4,h5,h6{margin: 0;}
+.contents_area{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+}
+.del{
+    text-decoration: line-through;
+}
+/*fadeInUp 효과*/
+ .fadein_up{
+    opacity: 0;
+    margin-top: 300px;
+ }
+.btn_gotop{
+    width: 45px;
+    display: none;
+    position: fixed;
+    bottom: 55px;
+    right: 10px;
+    cursor:pointer;
+	padding:15px;
+    z-index: 999999;
+}
+.btn_gobottom{
+    width: 45px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    cursor:pointer;
+	padding:15px;
+    z-index: 999999;
+}
+/* 반응형 */
+/* 테블릿 가로 (해상도 768px ~ 1023px)*/ 
+@media screen and (max-width:1023px) { 
+    .contents_area{
+        max-width: 1000px;
+    }
+} 
+
+/* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/ 
+@media screen and (max-width:767px) {
+    .btn_gotop{
+        width: 35px;
+    }
+    .btn_gobottom{
+        width: 35px;
+    }
+} 
+
+/* 모바일 세로 (해상도 ~ 479px)*/ 
+@media screen and (max-width:479px) {
+
+}
