@@ -1,430 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제로띵스</title>
-    <link rel="icon" href="./img/favicon.jpg">
-    <link rel="stylesheet" href="./css/commom.css">
-    <link rel="stylesheet" href="./css/h_f.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.css" />
+    <title>portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="./js/h_f.js"></script>
-    <script defer src="./js/index.js"></script>
-    <script defer src="./js/common.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 </head>
-
 <body>
-    <div class="top_banner">
-        <div class="tb_item">제로띵스에 오신걸 환영합니다.🌿</div>
-        <div class="tb_item">일상에 스며드는 초록색 소비를 제안합니다.🍀</div>
-        <div class="tb_item">건강한 라이프스타일 사이클을 경험해보세요.🌳</div>
-        <button type="button" class="tb_delete">X</button>
-    </div>
-    
     <div id="wrap">
-        <!-- 사이드메뉴 박스 바탕 -->
-        <div class="side_menu_wrap">
-            <div class="side_menu_bg"></div>
+        <div class="navi_wrap">
+            <ul class="navi_ul">
+                <li class="navi_li">Intro</li>
+                <li class="navi_li">About me</li>
+                <li class="navi_li">Skils</li>
+                <li class="navi_li">Projects</li>
+                <li class="navi_li">Contact</li>
+            </ul>
         </div>
-            <!-- 사이드메뉴 박스 -->
-        <div class="side_menu_box">
-            <div class="side_menu">
-                <div class="side_menu_top">
-                    <a href=""><img src="./img/메인로고.png" alt="logo"></a>
-                    <div class="h_icon join_icon"><a href=""></a></div>
-                </div>
-                <ul class="side_menu_ul">
-                    <li class="side_menu_li"><a href="about.html">ABOUT</a></li>
-                    <li class="side_menu_li">
-                        <div class="shop_menu">SHOP<div class="show_li_btn"></div></div> 
-                        <ul class="sub_ul">
-                            <li class="sub_li"><a href="product.html">전체보기</a></li>
-                            <li class="sub_li"><a href="product.html?cate=0">선물 세트</a></li>
-                            <li class="sub_li"><a href="product.html?cate=1">리빙 제품</a></li>
-                            <li class="sub_li"><a href="product.html?cate=2">욕실 제품</a></li>
-                            <li class="sub_li"><a href="product.html?cate=3">주방 제품</a></li>
-                            <li class="sub_li"><a href="product.html?cate=4">비건</a></li>
-                        </ul>
-                    </li>
-                    <li class="side_menu_li"><a href="">느린도서관</a></li>
-                    <li class="side_menu_li"><a href="">Q&A</a></li>
-                    <li class="side_menu_li"><a href="">게시판</a></li>
-                    <li class="side_menu_li"><a href="">B2B</a></li>
-                </ul>
-            </div>
-            <div class="side_ham_box">
-                <div class="side_ham_line"></div>
-                <div class="side_ham_line"></div>
-                <div class="side_ham_line"></div>
-            </div>
-        </div>
-        <!-- 헤더 -->
-        <header class="header">
-            <div class="header_left"></div>
-            <div class="header_center">
-                <div class="header_logo"><a href="#"><img src="./img/메인로고.png" alt="logo"></a></div>
-                <div class="header_menu">
-                    <ul class="menu_ul">
-                        <li class="menu_li"><a href="about.html">ABOUT</a></li>
-                        <li class="menu_li" id="shop_menu">
-                            <a href="product.html">SHOP</a>
-                            <ul class="drop_menu_ul">
-                                <li class="drop_menu_li"><a href="product.html">전체</a></li>
-                                <li class="drop_menu_li"><a href="product.html?cate=0">선물 세트</a></li>
-                                <li class="drop_menu_li"><a href="product.html?cate=1">리빙 제품</a></li>
-                                <li class="drop_menu_li"><a href="product.html?cate=2">욕실 제품</a></li>
-                                <li class="drop_menu_li"><a href="product.html?cate=3">주방 제품</a></li>
-                                <li class="drop_menu_li"><a href="product.html?cate=4">비건</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu_li"><a href="">느린도서관</a></li>
-                        <li class="menu_li"><a href="">Q&A</a></li>
-                        <li class="menu_li"><a href="">게시판</a></li>
-                        <li class="menu_li"><a href="">B2B</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="header_right">
-                <div class="icon_list">
-                    <div class="h_icon search_icon"><a href=""></a></div>
-                    <div class="h_icon join_icon"><a href=""></a></div>
-                    <div class="h_icon shop_bag_icon"><a href=""></a></div>
-                    <div class="join_speech_bubble">JOIN NOW +1,000</div>
-                </div>
-            </div>
-        </header>
-        <!-- main -->
-        <main class="main">
-            <!-- 상단이동 아이콘 삽입 -->
-            <img src="./img/위쪽 화살표.png" alt="" class="btn_gotop">
-            <img src="./img/아래쪽 화살표.png" alt="" class="btn_gobottom">
-            <!-- 메인슬라이드 -->
-            <div class="main_banner_outer">
-                <div class="main_banner"><a href="">
-                        <div class="mb_img" id="mb1"></div>
-                    </a></div>
-                <div class="main_banner"><a href="">
-                        <div class="mb_img" id="mb2"></div>
-                    </a></div>
-                <div class="main_banner"><a href="">
-                        <div class="mb_img" id="mb3"></div>
-                    </a></div>
-                <div class="main_banner"><a href="">
-                        <div class="mb_img" id="mb4"></div>
-                    </a></div>
-
-                <div class="mb_slide_btn" id="prev_btn"></div>
-                <div class="mb_slide_btn" id="next_btn"></div>
-
-                <div class="mb_indicator"></div>
-            </div>
-            <div class="category_banner_sec fadein_up">
+        <div class="indicator"><ul class="indi_ul"></ul></div>
+        <div class="fullpage">
+            <div class="fullsection page1" pageNum="1">
+                <div class="img_box"></div>
                 <div class="contents_area">
-                    <div class="category_banner">
-                        <div class="ad_ment">
-                            <h5>초록색 소비공간 "제로띵스"</h5>쓰레기 연구_<br>생활에서 쓰레기가 가장 많이<br>나오는 곳을 선택하세요.
+                    <div class="intro_text text_area">
+                        <p>안녕하세요</p>
+                        <p><span style="color:#eaa10e">프론트엔드 개발자</span>를 꿈꾸는</p>
+                        <p>박소연의 포트폴리오입니다.</p>
+                        <p>방문해 주셔서 감사합니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fullsection page2" pageNum="2">
+                <!-- <div class="bg_box"></div> -->
+                <div class="contents_area">
+                    <div class="title">ABOUT ME</div>
+                    <div class="myinfo_wrap">
+                        <div class="myinfo">
+                            <div class="info_icon" id="person_icon"></div>
+                            <div class="info_name">이름</div>
+                            <div class="info">박소연</div>
                         </div>
-                        <div class="trash_icon"></div>
-                        <div class="scroll_array">Scroll <div class="down_arrow">↓</div>
+                        <div class="myinfo">
+                            <div class="info_icon" id="cal_icon"></div>
+                            <div class="info_name">나이</div>
+                            <div class="info">1997.12.16</div>
+                        </div>
+                        <div class="myinfo">
+                            <div class="info_icon" id="add_icon"></div>
+                            <div class="info_name">주소</div>
+                            <div class="info">서울시 서초구</div>
+                        </div>
+                    </div>
+                    <div class="about_wrap">
+                        <div class="a_left">
+                            <p>"꾸준한 성장을 위해 새로운 도전을 두려워하지 않고 배움을 멈추지 않는 프론트엔드 개발자가 되고자 합니다.<br>
+                                상상으로 구현한 모습이 새로 배운 기술과 지식으로 실체화 되어 가는 과정에서 흥미를 느꼈습니다.
+                                꾸준한 성장을 위해 새로운 도전을 두려워하지 않고 배움을 멈추지 않는 프론트엔드 개발자가 되고자 합니다."</p>
+                        </div>
+                        <div class="a_right">
+                            <div class="small_tit">history</div>
+                            <div>
+                                <p>2013.03 ~ 2016.02 서문여자고등학교</p>
+                                <p>2016.03 ~ 2020.02 중부대학교(국제통상학과)</p>
+                                <p>2019.12 ~ 2020.12 인턴(BestHomeFashion - 마케팅부서)</p>
+                                <p>2022.05 ~ 2023.01 KH정보교육원 - 웹콘텐츠 개발자 양성과정</p>
+                            </div>
+                            <div class="small_tit">License</div>
+                            <div>
+                                <p>2021.02 컴퓨터활용능력2급</p>
+                                <p>2022.01 TOEIC 795점</p>
+                                <p>2022.03 컴퓨터활용능력1급</p>
+                                <p>2022.07 정보처리기사(필기만)</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="category_gallery_wrap">
+            <div class="fullsection page3" pageNum="3">
                 <div class="contents_area">
-                    <div class="category_title">#CATEGORY</div>
-                    <div class="category_gallery fadein_up">
-                        <div class="category_box">
-                            <a href="product.html">
-                                <div class="category_img_box">
-                                    <div class="category_img" id="all_pro_img"></div>
-                                </div>
-                                <div class="catrgory_title_box">
-                                    <div class="category_name">
-                                        <div class="cate_bigtitle">ALL PRODUCT</div>
-                                        <div class="cate_smtitle">전체 상품.</div>
-                                    </div>
-                                    <div class="go_click">go →</div>
-                                </div>
-                            </a>
+                    <div class="title">SKILS</div>
+                    <div class="skil_wrap">
+                        <div class="skils">
+                            <div class="skil_img" id="html"></div>
+                            <div class="skil_info">
+                                <div class="small_tit">HTML</div>
+                                <p>웹 표준 및 웹 접근성</p>
+                                <p>시멘틱 마크업</p>
+                            </div>
                         </div>
-                        <div class="category_box">
-                            <a href="product.html?cate=0">
-                                <div class="category_img_box">
-                                    <div class="category_img" id="gift_img"></div>
-                                </div>
-                                <div class="catrgory_title_box">
-                                    <div class="category_name">
-                                        <div class="cate_bigtitle">ZERO-WASTE GIFT</div>
-                                        <div class="cate_smtitle">선물할 때.</div>
-                                    </div>
-                                    <div class="go_click">go →</div>
-                                </div>
-                            </a>
+                        <div class="skils">
+                            <div class="skil_img" id="css"></div>
+                            <div class="skil_info">
+                                <div class="small_tit">CSS</div>
+                                <p>미디어쿼리를 이용한 반응형 웹</p>
+                                <p>Transition / Animation 활용</p>
+                            </div>
                         </div>
-                        <div class="category_box">
-                            <a href="product.html?cate=1">
-                                <div class="category_img_box">
-                                    <div class="category_img" id="living_img"></div>
-                                </div>
-                                <div class="catrgory_title_box">
-                                    <div class="category_name">
-                                        <div class="cate_bigtitle">LIVING</div>
-                                        <div class="cate_smtitle">일상에서.</div>
-                                    </div>
-                                    <div class="go_click">go →</div>
-                                </div>
-                            </a>
+                        <div class="skils">
+                            <div class="skil_img" id="js"></div>
+                            <div class="skil_info">
+                                <div class="small_tit">JS & JQUERY</div>
+                                <p>기본 개념과 문법의 이해</p>
+                                <p>함수의 활용</p>
+                                <p>동적 소스 생성</p>
+                            </div>
                         </div>
-                        <div class="category_box">
-                            <a href="product.html?cate=2">
-                                <div class="category_img_box">
-                                    <div class="category_img" id="bath_img"></div>
-                                </div>
-                                <div class="catrgory_title_box">
-                                    <div class="category_name">
-                                        <div class="cate_bigtitle">BATH</div>
-                                        <div class="cate_smtitle">욕실에서.</div>
-                                    </div>
-                                    <div class="go_click">go →</div>
-                                </div>
-                            </a>
+                        <div class="skils">
+                            <div class="skil_img" id="php"></div>
+                            <div class="skil_info">
+                                <div class="small_tit">PHP & MYSQL</div>
+                                <p>기본 개념과 문법의 이해</p>
+                                <p>mySQL을 이용한 데이터 관리</p>
+                            </div>
                         </div>
-                        <div class="category_box">
-                            <a href="product.html?cate=3">
-                                <div class="category_img_box">
-                                    <div class="category_img" id="kitchen_img"></div>
-                                </div>
-                                <div class="catrgory_title_box">
-                                    <div class="category_name">
-                                        <div class="cate_bigtitle">KITCHEN</div>
-                                        <div class="cate_smtitle">부엌에서.</div>
-                                    </div>
-                                    <div class="go_click">go →</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="category_box">
-                            <a href="product.html?cate=4">
-                                <div class="category_img_box">
-                                    <div class="category_img" id="vegan_img"></div>
-                                </div>
-                                <div class="catrgory_title_box">
-                                    <div class="category_name">
-                                        <div class="cate_bigtitle">VEGAN</div>
-                                        <div class="cate_smtitle">마켓갈 때.</div>
-                                    </div>
-                                    <div class="go_click">go →</div>
-                                </div>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="small_tit">MORE</div>
+                    <div class="more_wrap">
+                        <div class="more_img" id="github"></div>
+                        <div class="more_img" id="notion"></div>
                     </div>
                 </div>
             </div>
-            <div class="ad_banner_wrap">
-                <div class="ad_banner_row">
-                    <div class="ad_banner ab_short" id="ad_1"></div>
-                    <div class="ad_banner ab_long" id="ad_2"></div>
-                </div>
-                <div class="ad_banner_row">
-                    <div class="ad_banner ab_long" id="ad_3"></div>
-                    <div class="ad_banner ab_short" id="ad_4"></div>
-                </div>
-            </div>
-            <div class="best_item_wrap fadein_up">
-                <div class="bitem_title_box">
-                    <div class="bitem_bigtitle">#OFFLINE BEST</div>
-                    <div class="bitem_smtitile">제로띵스 오프라인 매장 인기상품</div>
-                </div>
+            <div class="fullsection page4" pageNum="4">
                 <div class="contents_area">
-                    <div class="best_item_sec">
-                        
-                        <div class="bitem_slide_sec">
-                            <div class="bitem_slide_box">
-                                <div class="swiper mySwiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide bitem_img_box">
-                                            <a href="deal.html?cate=0&item=1">
-                                                <img src="./img/items/giftset/main/1.jpg" alt="">
-                                                <div class="bitem_info_box">
-                                                    <div class="bitem_txt">
-                                                        <p>[Gift Set] 크리스마스 제로웨이스트 키트</p>
-                                                        <span style="text-decoration: line-through;">30,700원</span>
-                                                        <span style="color: #3c6255;">28,900원</span>
-                                                    </div>
-                                                </div>
-                                        </a>
+                    <div class="title">PROJECTS</div>
+                    <div class="pj_wrap">
+                        <div class="pj_container">
+                            <div class="pj_card">
+                                <div class="pj_front">
+                                    <div class="pj_img" id="zerothings"></div>
+                                    <div class="pj_info_box">
+                                        <div class="pj_name">zerothings(반응형)</div>
+                                        <p>"친환경 제품을 취급하는 [제로띵스] 웹사이트를 리뉴얼 해보았습니다."</p>
+                                        <div class="pj_tit">소요기간</div>
+                                        <span>23/01/11 ~ 13/01/18 (8일)</span>
+                                        <div class="pj_tit">참여도</div>
+                                        <span>100%(개인프로젝트)</span>
+                                        <div class="pj_tit">사용 기술</div>
+                                        <span>Html, CSS, JavaScript, JQuery</span>
                                     </div>
-                                        <div class="swiper-slide bitem_img_box">
-                                            <a href="deal.html?cate=2&item=2">
-                                                <img src="./img/items/bath/main/2.jpg" alt="">
-                                                <div class="bitem_info_box">
-                                                    <div class="bitem_txt">
-                                                        <p>[아로마티카] 서렌바디바 라벤더 & 버가못 바디비누</p>
-                                                        <span>15,000원</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide bitem_img_box">
-                                            <a href="deal.html?cate=1&item=1">
-                                                <img src="./img/items/living/main/1.jpg" alt="">
-                                                <div class="bitem_info_box">
-                                                    <div class="bitem_txt">
-                                                        <p>[피팔레트] 뽀글이 텀블러 홀더백</p>
-                                                        <span>11,000원</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide bitem_img_box">
-                                            <a href="deal.html?cate=3&item=6">
-                                                <img src="./img/items/kitchen/main/6.jpg" alt="">
-                                                <div class="bitem_info_box">
-                                                    <div class="bitem_txt">
-                                                        <p>[스카이폴리오] 스토조 접이식텀블러 3종</p>
-                                                        <span>28,000원</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide bitem_img_box">
-                                            <a href="deal.html?cate=4&item=1">
-                                                <img src="./img/items/vegan/main/1.jpg" alt="">
-                                                <div class="bitem_info_box">
-                                                    <div class="bitem_txt">
-                                                        <p>[널담] 견과초코볼 (아몬드)_1봉지</p>
-                                                        <span>1,900원</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide bitem_img_box">
-                                            <a href="deal.html?cate=0&item=2">
-                                                <img src="./img/items/giftset/main/2.jpg" alt="">
-                                                <div class="bitem_info_box">
-                                                    <div class="bitem_txt">
-                                                        <p>[제로웨이스트 키트] 여행용 트래블 키트</p>
-                                                        <span style="text-decoration: line-through;">48,200원</span>
-                                                        <span style="color: #3c6255;">44,900원</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide bitem_img_box">
-                                            <a href="deal.html?cate=1&item=2">
-                                                <img src="./img/items/living/main/2.jpg" alt="">
-                                                <div class="bitem_info_box">
-                                                    <div class="bitem_txt">
-                                                        <p>[피팔레트] 업사이클 파우치</p>
-                                                        <span>9,000원</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide bitem_img_box">
-                                            <a href="deal.html?cate=3&item=2">
-                                                <img src="./img/items/kitchen/main/2.jpg" alt="">
-                                                <div class="bitem_info_box">
-                                                    <div class="bitem_txt">
-                                                        <p>[이크] eeeek 실리콘 아기 투약병 20cc _3개입</p>
-                                                        <span>15,900원</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide bitem_img_box">
-                                            <a href="deal.html?cate=2&item=3">
-                                                <img src="./img/items/bath/main/3.jpg" alt="">
-                                                <div class="bitem_info_box">
-                                                    <div class="bitem_txt">
-                                                        <p>[조르단] 그린클린 체인지 칫솔 (+ 2 Refills)</p>
-                                                        <span>6,900원</span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
+                                </div>
+                                <div class="pj_back">
+                                    <div class="pj_tit">느낀점</div>
+                                    <p>"처음으로 혼자 진행한 프로젝트여서 기획에 많은 고민과 시간을 들였지만,
+                                        덕분에 친환경 제품이라는 판매상품의 분위기에 맞게 사이트를 구현할 수 있었고 그 과정에서 탄탄한 기획의 중요성을 배웠습니다."</p>
+                                    <div class="pj_tit">배운점</div>
+                                    <p>"swiper를 이용해 슬라이드를 구현해보고, js를 이용해 더미데이터를 넣어놓고 데이터를 불러오는 함수를 만들어 볼 수 있었습니다.<br>
+                                        스크롤 이벤트를 이용해 fadeIn-Up 효과와 slideIn 효과를 구현해보았습니다."</p>
+                                    <div class="go_story"><a href="https://ovenapp.io/view/1W2Yjpu8SC17tguZi7NRMW8XJ0P4nUBI/LYfld">스토리보드 보러가기📝</a></div>
+                                    <div class="pj_btn_wrap">
+                                        <div class="pj_btn view_btn"><a href="https://soyeonpark4156.github.io/zerothings/">VIEW</a></div>
+                                        <div class="pj_btn git_btn"><a href="https://github.com/SoyeonPark4156/zerothings">GitHub</a></div>
                                     </div>
-                                    <div class="swiper-button-next btn_color"></div>
-                                    <div class="swiper-button-prev btn_color"></div>
-                                    <div class="swiper-pagination btn_color"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pj_container">
+                            <div class="pj_card">
+                                <div class="pj_front">
+                                    <div class="pj_img" id="arton"></div>
+                                    <div class="pj_info_box">
+                                        <div class="pj_name">ArtOn(반응형)</div>
+                                        <p>"영화,연극,뮤지컬 등 각종 공연의 티켓을 예매할 수 있는 사이트를 팀프로젝트로 진행하였습니다."</p>
+                                        <div class="pj_tit">소요기간</div>
+                                        <span>22/11/29 ~ 22/12/12 (14일)</span>
+                                        <div class="pj_tit">참여도</div>
+                                        <span>20%(5명의 팀프로젝트)</span>
+                                        <div class="pj_tit">사용 기술(본인이 사용한 것만 기재)</div>
+                                        <span>Html, CSS, JavaScript, JQuery ,jstl</span>
+                                    </div>
+                                </div>
+                                <div class="pj_back">
+                                    <div class="pj_tit">느낀점</div>
+                                    <p>"팀원들과 끈임없이 소통하면서
+                                        문제가 생기면 서로의 의견과 지식을 나누고, 의욕을 북돋아주며 서로에게 동기부여를 해주었습니다.
+                                        또한, 모든 회의를 노션에 문서화 하였는데 이 모든 과정에서 
+                                        팀프로젝트는 기록과 팀원과의 소통이 중요하다는 점을 배울 수 있었습니다. 
+                                        </p>
+                                    <div class="pj_tit">배운점</div>
+                                    <p>"프론트엔드를 맡아 여러 페이지중 예매페이지, 마이페이지, 회원정보확인페이지를 구현했습니다.
+                                        리뷰 파트에서 소비자가 별점과 댓글을 남길 수 있는 기능을 구현하면서
+                                        요소를 잡고, 동적으로 소스를 구성하는데 있어서 이해도를 높일 수 있었습니다."</p>
+                                    
+                                    <div class="pj_btn_wrap">
+                                        <div class="pj_btn view_btn"><a href="https://soyeonpark4156.github.io/Arton_ticketing/">VIEW</a></div>
+                                        <div class="pj_btn git_btn"><a href="https://github.com/SoyeonPark4156/Arton_ticketing">GitHub</a></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="insta_wrap fadein_up">
+            <div class="fullsection page5" pageNum="5">
                 <div class="contents_area">
-                    <div class="insta_title">INSTAGRAM</div>
-                    <div class="insta_ment">초록색 소비공간, 제로띵스의 소식을 받아보실 수 있습니다.</div>
-                    <div class="insta_link">
-                        <a href="https://www.instagram.com/zerothings_shop/">@zerothings_shop</a>
+                    <div class="title">CONTACT</div>
+                    <div class="contact_wrap">
+                        <div class="con_box">
+                            <div class="con_icon" id="mail_icon">
+                                <a href="mailTo:soy_4156@naver.com"></a>
+                            </div>
+                            <div class="con_txt">soy_4156@naver.com</div>
+                        </div>
+                        <div class="con_box">
+                            <div class="con_icon" id="kakao_icon">
+                                <a href="https://open.kakao.com/o/sM3S7E0e"></a>
+                            </div>
+                            <div class="con_txt">Kakao 오픈채팅</div>
+                        </div>
+                        <div class="con_box">
+                            <div class="con_icon" id="git_icon">
+                                <a href="https://github.com/SoyeonPark4156"></a>
+                            </div>
+                            <div class="con_txt">GitHub</div>
+                        </div>
                     </div>
-                    <div class="insta_img_sec">
-                        <div class="insta_img"><img src="./img/insta1.jpg" alt=""></div>
-                        <div class="insta_img"><img src="./img/insta2.jpg" alt=""></div>
-                        <div class="insta_img"><img src="./img/insta3.jpg" alt=""></div>
-                        <div class="insta_img"><img src="./img/insta4.jpg" alt=""></div>
-                        <div class="insta_img"><img src="./img/insta5.jpg" alt=""></div>
-                        <div class="insta_img"><img src="./img/insta6.jpg" alt=""></div>
-                    </div>
+                    <div class="closing_ment">끝까지 봐주셔서 감사합니다:)</div>
                 </div>
             </div>
-        </main>
-        <footer class="footer">
-            <div class="footer_logo">
-                <a href="#"><img src="./img/메인로고.png" alt=""></a>
-            </div>
-            <div class="footer_infos">
-                <p>상호: 제로띵스 | 대표: 이윤주 | 개인정보관리책임자: 이윤주 | 전화: 02-2263-6148 | 이메일: zerothings_shop@naver.com</p>
-                <p>주소: 서울 중구 수표로 32-1, 3층 제로띵스 | 사업자등록번호: 126-55-00563 | 통신판매: 제 2021-서울중구-1313 호 | 호스팅제공자: (주)식스샵</p>
-            </div>
-            <div class="footer_icons">
-                <a href="https://www.instagram.com/zerothings_shop/"><div class="f_icon insta_icon"></div></a>
-                <a href="https://blog.naver.com/zerothings_shop"><div class="f_icon blog_icon"></div></a>
-            </div>
-            
-        </footer>
+        </div>
     </div>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 2, 
-            spaceBetween: 50,
-            slidesPerGroup: 2,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            autoplay: {
-                delay: 1500,
-                pauseOnMouseEnter: true,
-                disableOnInteraction: false
-            },
-            speed: 1500,
-            breakpoints: {
-                768: {
-                    slidesPerView: 3,  //브라우저가 1024보다 클 때
-                    spaceBetween: 50,
-                    slidesPerGroup: 3,
-                },
-            },
-        });
-    </script>
-
 </body>
-
 </html>

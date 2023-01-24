@@ -1,0 +1,417 @@
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 타이틀만 이 폰트 */
+@font-face {
+    font-family: 'LeferiPoint-BlackA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html,body {
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+    font-family: 'IBMPlexSansKR-Regular';
+}
+ul, li{margin:0;padding:0;list-style:none}
+#wrap{
+    width: 100%;
+    height: 100%;
+}
+.contents_area{
+    max-width: 1100px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.navi_wrap{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* transform: translateY(-50%); */
+    z-index: 999;
+    transition: all 0.3s;
+    border-right: 1px solid #ddd;
+}
+.navi_wrap:hover{
+    background-color: rgba(255,255,255,0.7);
+}
+.navi_ul{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.navi_li{
+    font-size: 20px;
+    color: #eaa10e;
+    cursor: pointer;
+    padding: 20px;
+}
+.navi_li.on{
+    color: #000;
+    font-weight: 900;
+}
+.fullpage {
+    width:100%;
+    height:100%;
+    position:relative;
+    top:0px;
+    z-index:9;
+}
+.fullsection{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.fullsection span{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+/* .page1{background-color: #f7f3ed;} */
+.page1{
+    background: url(./img/mypic5.jpg) no-repeat center / cover;
+}
+.page2{background-color: #f7f3ed;}
+.page3{background-color: #eae6e0;}
+.page4{background-color: #e2dcd4;}
+.page5{background-color: #d6cec3;}
+
+.indicator {
+    position:fixed;
+    right: 2%;
+    top:50%;
+    transform:translateY(-50%); 
+    z-index:999;
+}
+.indicator li {
+    width: 7px;
+    height: 7px;
+    margin-bottom:30px; 
+    border-radius:100%;
+    background:#000;
+    cursor:pointer;
+    transition: all 0.3s;
+}
+.indicator li:hover{
+    transform: scale(2);
+}
+.indicator .in {
+    transform: scale(2);
+}
+/* 1page */
+/* .img_box{
+    width: 50vh;
+    padding-top: 100%;
+    position: absolute;
+    top: 50%;
+    left : 20%;
+    transform: translate(0,-50%);
+    background: url(./img/mypic4.jpg) no-repeat center / contain;
+} */
+/* .intro_text{
+    position: absolute;
+    top: 50%;
+    right : 20%;
+    transform: translate(0,-50%);
+    font-size: 30px;
+    font-weight: 900;
+} */
+.intro_text{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: 40px;
+    font-weight: 900;
+    background-color: rgba(255,255,255,0.7);
+    padding: 50px;
+}
+.intro_text p {
+    opacity: 1;
+}
+.intro_text p span{
+    display: inline;
+}
+
+/* 2page */
+/* .bg_box{
+    width: 80%;
+    height: 90%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-50%);
+    background-color: rgba(255,255,255,0.4);
+} */
+.title{
+    font-size: 45px;
+    font-weight: 900;
+    padding: 30px;
+    font-family: 'LeferiPoint-BlackA';
+}
+.myinfo_wrap{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-top: 2px solid #664400;
+    border-bottom: 2px solid #664400;
+}
+.myinfo{
+    width: calc(100% / 3);
+    position: relative;
+}
+.info_icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 38%;
+    top: 20%;
+}
+#person_icon{background: url(./img/person_icon.png) no-repeat center / cover;}
+#cal_icon{background: url(./img/cal_icon.png) no-repeat center / cover;}
+#add_icon{background: url(./img/add_icon.png) no-repeat center / cover;}
+.info_name{
+    position: absolute;
+    left: 52%;
+    top: 20%;
+    font-size: 21px;
+    font-weight: 600;
+}
+.info{
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: 500;
+}
+.about_wrap{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+.a_left{
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+.a_right{
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.small_tit{
+    font-size: 30px;
+    font-weight: 800;
+    color: #664400;
+}
+/* 3page */
+.skil_wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #664400;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.skils{
+    width: 50%;
+    height: 200px;
+    display: flex;
+}
+.skil_img{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    margin-right: 20px;
+}
+#html{background: url(./img/html_icon.png) no-repeat center / contain;}
+#css{background: url(./img/css_icon.png) no-repeat center / contain;}
+#js{background: url(./img/js_icon.png) no-repeat center / contain;}
+#php{background: url(./img/php_icon.png) no-repeat center / contain;}
+.skil_info{
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 600;
+}
+.more_wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.more_img{
+    width: 80px;
+    height: 80px;
+    align-self: center;
+    margin-right: 40px;
+}
+#github{background: url(./img/github_icon.png) no-repeat center / contain;}
+#notion{background: url(./img/notion_icon.png) no-repeat center / contain;}
+/* 4page */
+/* .popup_wrap{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 70px 0 20px 0;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    box-sizing: border-box;
+} */
+.pj_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.pj_container{
+    width: 400px;
+    height: 600px;
+    perspective: 1100px;
+}
+.pj_card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 0.5s;
+    transform-style: preserve-3d;  
+}
+.pj_front, .pj_back{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: 5px 5px 10px 5px gray;
+}
+.pj_img{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+#zerothings{
+    background: url(./img/zerothings.png) no-repeat center / cover;
+    border: 5px solid #97B38B;
+}
+#arton{
+    background: url(./img/arton.png) no-repeat center / cover;
+    border: 5px solid #008049;
+}
+.pj_info_box{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.pj_name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.pj_tit{
+    font-size: 18px;
+    font-weight: 600;
+    color: #664400;
+}
+.pj_info_box span{
+    display: inline;
+    line-height: 1.8em;
+}
+.pj_back{
+    transform: rotateY(180deg);
+    padding: 15px;
+    box-sizing: border-box;
+}
+.pj_back p{
+    line-height: 28px;
+    font-size: 18px;
+}
+.pj_btn_wrap{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+.pj_btn{
+    width: 150px;
+    border-radius: 5px;
+    margin: 20px;
+    box-sizing: border-box;
+    width: 150px;
+    border-radius: 5px;
+    margin: 20px;
+    line-height: 60px;
+    text-align: center;
+}
+.pj_btn a{
+    font-size: 20px;
+    font-weight: 700;
+    color: #664400;
+    text-decoration: none;
+}
+.view_btn{
+    background-color: #eaa10e;
+}
+.view_btn a{
+    color: #664400;
+}
+.git_btn{
+    background-color: #664400; 
+}
+.git_btn a{
+    color: #eaa10e;
+}
+.pj_container:hover .pj_card{
+    transform: rotateY(180deg);
+}
+/* 5page */
+.contact_wrap{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+}
+.con_box{
+    width: calc(100% / 3);
+}
+.con_icon{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.con_icon:hover{
+    transform: scale(1.2);
+}
+#mail_icon{background: url(./img/email_icon.png) no-repeat center / contain;}
+#kakao_icon{background: url(./img/kakao.jpg) no-repeat center / contain;}
+#git_icon{background: url(./img/github_icon.png) no-repeat center / contain;}
+.con_txt{
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 800;
+    color: #664400;
+}
+.closing_ment{
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    padding: 100px 0;
+}
