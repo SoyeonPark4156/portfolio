@@ -38,7 +38,7 @@ ul, li{margin:0;padding:0;list-style:none}
     /* transform: translateY(-50%); */
     z-index: 999;
     transition: all 0.3s;
-    border-right: 1px solid #ddd;
+    /* border-right: 1px solid #ddd; */
 }
 .navi_wrap:hover{
     background-color: rgba(255,255,255,0.7);
@@ -213,6 +213,11 @@ ul, li{margin:0;padding:0;list-style:none}
     font-weight: 800;
     color: #664400;
 }
+.small_tit span{
+    display: inline;
+    font-size: 16px;
+    margin-left: 20px;
+}
 /* 3page */
 .skil_wrap{
     width: 100%;
@@ -224,7 +229,7 @@ ul, li{margin:0;padding:0;list-style:none}
 }
 .skils{
     width: 50%;
-    height: 200px;
+    height: 130px;
     display: flex;
 }
 .skil_img{
@@ -236,13 +241,33 @@ ul, li{margin:0;padding:0;list-style:none}
 #html{background: url(./img/html_icon.png) no-repeat center / contain;}
 #css{background: url(./img/css_icon.png) no-repeat center / contain;}
 #js{background: url(./img/js_icon.png) no-repeat center / contain;}
+#jquery{background: url(./img/jquery_icon.png) no-repeat center / contain;}
 #php{background: url(./img/php_icon.png) no-repeat center / contain;}
+#mysql{background: url(./img/mysql_icon.png) no-repeat center / contain;}
+#ajax{background: url(./img/ajax_icon.png) no-repeat center / contain;}
 .skil_info{
+    width: 100%;
     padding: 15px;
     box-sizing: border-box;
     font-size: 16px;
     font-weight: 600;
+    align-self: center;
 }
+.gauge_box{
+    width: 100%;
+    height: 15px;
+    background-color: #fff;
+    position: relative;
+}
+.guage{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #664400;
+}
+.ninety{width: 90%;}
+.seventy{width: 70%;}
 .more_wrap{
     width: 100%;
     display: flex;
@@ -258,6 +283,9 @@ ul, li{margin:0;padding:0;list-style:none}
 }
 #github{background: url(./img/github_icon.png) no-repeat center / contain;}
 #notion{background: url(./img/notion_icon.png) no-repeat center / contain;}
+#gitkraken{background: url(./img/gitkraken_icon.png) no-repeat center / contain;}
+#gitdesktop{background: url(./img/gitdesktop_icon.png) no-repeat bottom / 85px;}
+#excel{background: url(./img/excel_icon.png) no-repeat center / contain;}
 /* 4page */
 /* .popup_wrap{
     position: fixed;
@@ -286,6 +314,12 @@ ul, li{margin:0;padding:0;list-style:none}
     position: relative;
     transition: all 0.5s;
     transform-style: preserve-3d;  
+}
+.pj_front {
+    z-index: 9;
+}
+.pj_back {
+    z-index: 99;
 }
 .pj_front, .pj_back{
     width: 100%;
@@ -358,8 +392,11 @@ ul, li{margin:0;padding:0;list-style:none}
     margin: 20px;
     line-height: 60px;
     text-align: center;
+    cursor: pointer;
 }
 .pj_btn a{
+    width: 100%;
+    height: 100%;
     font-size: 20px;
     font-weight: 700;
     color: #664400;
