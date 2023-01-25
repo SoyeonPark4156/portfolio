@@ -203,10 +203,20 @@ ul, li{margin:0;padding:0;list-style:none}
     box-sizing: border-box;
     font-size: 20px;
 }
+.a_left p{
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #726750;
+}
 .a_right{
     width: 50%;
     padding: 15px;
     box-sizing: border-box;
+}
+.a_right p{
+    font-size: 17px;
+    font-weight: 500;
 }
 .small_tit{
     font-size: 30px;
