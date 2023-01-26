@@ -3,7 +3,7 @@ $(document).ready(function(){
     onepage_set();
     quickClick();
     indiClick();
-    // text_event();
+    text_event();
 });
 
 function onepage_set(){
@@ -107,13 +107,16 @@ function indiClick(){
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 function text_event(){
-    $('.intro_text').animate({
-        left : '50%'
-    },1000)
-    let text_cnt = $('.text_area p').length;
+    // $('.intro_text').css({
+    //     transform: 'translateY(-50%)'
+    // }).animate({
+    //     left : '50%'
+    // },1000)
+    let text_cnt = $('.intro_text p').length;
     
     for(let i = 0; i < text_cnt; i++)
-    $('.text_area p').delay(i*200).animate({
+    $('.intro_text p').eq(i).delay(i*300).animate({
+        top:'0',
         opacity : '1'
     },1000)
 }
