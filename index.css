@@ -351,11 +351,11 @@ ul, li{margin:0;padding:0;list-style:none}
 }
 #zerothings{
     background: url(./img/zerothings.png) no-repeat center / cover;
-    border-bottom: 5px solid #97B38B;
+    border-bottom: 5px solid #fff;
 }
 #arton{
     background: url(./img/arton.png) no-repeat center / cover;
-    border-bottom: 5px solid #008049;
+    border-bottom: 5px solid #fff;
 }
 .pj_info_box{
     width: 100%;
