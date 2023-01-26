@@ -230,7 +230,7 @@ ul, li{margin:0;padding:0;list-style:none}
     color: #000;
 }
 /* 3page */
-.skil_wrap{
+.skill_wrap{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -238,12 +238,12 @@ ul, li{margin:0;padding:0;list-style:none}
     padding: 0 20px;
     box-sizing: border-box;
 }
-.skils{
+.skills{
     width: 50%;
     height: 115px;
     display: flex;
 }
-.skil_img{
+.skill_img{
     width: 100px;
     height: 100px;
     align-self: center;
@@ -256,7 +256,7 @@ ul, li{margin:0;padding:0;list-style:none}
 #php{background: url(./img/php_icon.png) no-repeat center / contain;}
 #mysql{background: url(./img/mysql_icon.png) no-repeat center / contain;}
 #ajax{background: url(./img/ajax_icon.png) no-repeat center / contain;}
-.skil_info{
+.skill_info{
     width: 100%;
     padding: 15px;
     box-sizing: border-box;
