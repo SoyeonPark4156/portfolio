@@ -41,6 +41,12 @@ ul, li{margin:0;padding:0;list-style:none}
 .navi_wrap:hover{
     background-color: rgba(255,255,255,0.7);
 }
+.logo{
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
 .navi_ul{
     position: relative;
     top: 50%;
@@ -278,8 +284,8 @@ ul, li{margin:0;padding:0;list-style:none}
     background:linear-gradient(to bottom right,#f0c5e8, #acd3f5);
     
 }
-.ninety{width: 90%;}
-.seventy{width: 70%;}
+.ninety{width: 0;}
+.seventy{width: 0;}
 .more_wrap{
     width: 100%;
     display: flex;

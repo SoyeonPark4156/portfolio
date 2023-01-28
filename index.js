@@ -4,12 +4,28 @@ $(document).ready(function(){
     quickClick();
     indiClick();
     text_event();
+
+    //게이지 차는거
+    $('.page3').mouseenter(function(){
+        $('.ninety').css({
+            width : 0
+        }).animate({
+            width : "90%"
+        },2000)
+        $('.seventy').css({
+            width : 0
+        }).animate({
+            width : "70%"
+        },2000)
+    })
 });
 
 function onepage_set(){
     let page_cnt = $('.fullpage .fullsection').size();
     console.log(page_cnt)
 
+    
+   
     for(let i = 1; i <= page_cnt; i++){
         $('.indi_ul').append("<li></li>");
     }
@@ -19,6 +35,7 @@ function onepage_set(){
 
     //마우스 휠 이벤트
     $(window).on("mousewheel",function(event){
+        
         let page = $('.navi_li.on'); //현재 on 되어 있는 페이지
 
         //현재 애니메이션이 작동 하고 있으면 빠져나가기
@@ -27,6 +44,7 @@ function onepage_set(){
 
         //마우스 휠을 아래로 - 음수
         if(event.originalEvent.wheelDelta < 0){
+            
             let next_page = page.index() + 1;
         
             if(next_page < page_cnt){ //마지막 페이지가 아닐때만 animate !
@@ -45,6 +63,7 @@ function onepage_set(){
         }
         //마우스 휠을 위로 - 양수
         else if(event.originalEvent.wheelDelta >= 0){
+            
             let prev_page = page.index() - 1;
             if(page.index() > 0){
                 
@@ -58,6 +77,7 @@ function onepage_set(){
                 $('.indi_ul li').eq(prev_page).addClass('in').siblings().removeClass('in');
             }
         }
+
     });
     
     $(window).resize(function(){
@@ -78,25 +98,32 @@ function win_resize(){
         "top": -page_h + "px"
     });
 }
-// 사이드 퀵버튼 클릭 이동
 
+
+// 사이드 퀵버튼 클릭 이동
 function quickClick(){
 	$(".navi_li").click(function(){
 		let click_idx = $(this).index();
 		let length=0;
+
+        //해당페이지의 총 높이 구하고
 		for(let i=1; i <= click_idx; i++)
 		{
 			length+=$(".page"+i).height();
 		}
+
+        //작동중일 땐 안되게
 		if($("body").find(".fullpage:animated").length >= 1) return false;
         
+        //css 효과 주는거
 		$(this).addClass("on").siblings().removeClass("on");
         $('.indi_ul li').eq(click_idx).addClass('in').siblings().removeClass('in');
 		
+        //총 높이 구해준만큼 움직이게
 		$(".fullpage").animate({"top": -length + "px"},800, "swing");
 		return false;
-    }
-)};
+    })
+};
 function indiClick(){
    $(document).on('click','.indi_ul li',function(){
     let click_idx = $(this).index();
@@ -107,11 +134,7 @@ function indiClick(){
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 function text_event(){
-    // $('.intro_text').css({
-    //     transform: 'translateY(-50%)'
-    // }).animate({
-    //     left : '50%'
-    // },1000)
+
     let text_cnt = $('.intro_text p').length;
     
     for(let i = 0; i < text_cnt; i++)
